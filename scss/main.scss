@@ -1,0 +1,202 @@
+//$primary-color: rgb(73, 67, 67);
+$primary-color: rgb(246, 241, 248);
+$secondary-color: #38034d;
+// $secondary-color: #521aee;
+$show-home-image: true;
+$show-image: url(/img/event3.png);
+$backgroung-opacity: 0.8;
+
+@mixin easeOut {
+  transition: all 0.5s ease-out;
+}
+
+@import "config";
+@import "menu";
+@import "team";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @include background;
+
+  background-color: $primary-color;
+  color: set-text-color($primary-color);
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+//Headings
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+
+  &.lg-heading {
+    font-size: 6rem;
+    width: 100%;
+    margin: auto;
+  }
+  &.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: rgba(lighten($primary-color, 2), 0.5);
+  }
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+.text-secondary {
+  color: $secondary-color;
+}
+
+main {
+  padding: 4rem;
+  //height: 100%;
+  min-height: calc(100vh - 60px);
+
+  .icons {
+    margin-top: 1rem;
+    // background-color: rgb(184, 192, 228);
+  }
+  a {
+    padding: 0.4rem;
+
+    &:hover {
+      color: $secondary-color;
+      @include easeOut();
+    }
+  }
+
+  &#home {
+    overflow: hidden;
+    h1 {
+      margin-top: 20vh;
+    }
+  }
+}
+
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas:
+    "bioimage bio bio"
+    "job1 job2 job3";
+  grid-template-columns: repeat(3, 1fr);
+
+  .bio-image {
+    grid-area: bioimage;
+    margin: auto;
+    width: 100%;
+  }
+
+  .bio {
+    grid-area: bio;
+    font-size: 1.5rem;
+  }
+}
+
+.job-1 {
+  grid-area: job1;
+}
+
+.job-2 {
+  grid-area: job2;
+}
+
+.job-3 {
+  grid-area: job3;
+}
+
+.job {
+  background: lighten($primary-color, $amount: 5);
+  padding: 0.5rem;
+  border-bottom: $secondary-color 5px solid;
+}
+
+//Events
+.eventsOn {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+
+  img {
+    width: 100%;
+    // height: 90%;
+    border: 1px rgb(201, 61, 138) solid;
+
+    &:hover {
+      opacity: 0.5;
+      border-color: $secondary-color;
+      @include easeOut();
+    }
+  }
+}
+
+//Contact Page
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+
+  div {
+    font-size: 2rem;
+    border: 3px #fff solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+
+    @include easeOut();
+    &:hover {
+      padding: 0.5rem 1.5rem;
+      background: $secondary-color;
+      color: set-text-color($secondary-color);
+      span {
+        color: set-text-color($secondary-color);
+      }
+    }
+  }
+}
+
+//Buttons styles
+.btn {
+  display: block;
+  padding: 0.3rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  &:hover {
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
+  }
+}
+
+.btn-dark {
+  @extend .btn;
+  background: darken($primary-color, 50);
+  color: #fff;
+}
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: darken($primary-color, $amount: 10);
+  color: set-text-color($primary-color);
+  height: 60px;
+}
+
+@import "mobile";
