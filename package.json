@@ -6,7 +6,7 @@
   "homepage": "https://chaitanyaGitHub1.github.io/Techeon-CBIT",
   "scripts": {
     "sass": "node-sass -w scss/ -o dist/css/ --recursive",
-    "deploye": "gh-pages -d "
+    "deploye": "gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",
