@@ -1,9 +1,9 @@
 //$primary-color: rgb(73, 67, 67);
-$primary-color: rgb(246, 241, 248);
+$primary-color: rgb(252, 252, 252);
 $secondary-color: #38034d;
 // $secondary-color: #521aee;
 $show-home-image: true;
-$show-image: url(/img/event3.png);
+$show-image: url(/dist/img/event3.png);
 $backgroung-opacity: 0.8;
 
 @mixin easeOut {
