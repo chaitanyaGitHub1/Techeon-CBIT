@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://github.com/chaitanyaGitHub1.github.io/Techeon-CBIT",
+  "homepage": "https://chaitanyaGitHub1.github.io/Techeon-CBIT",
   "scripts": {
     "sass": "node-sass -w scss/ -o dist/css/ --recursive",
     "deploye": "gh-pages -d dist"
