@@ -3,7 +3,7 @@ $primary-color: rgb(252, 252, 252);
 $secondary-color: #38034d;
 // $secondary-color: #521aee;
 $show-home-image: true;
-$show-image: url(img/event3.png);
+$show-image: url(../img/event3.png);
 $backgroung-opacity: 0.7;
 
 @mixin easeOut {
