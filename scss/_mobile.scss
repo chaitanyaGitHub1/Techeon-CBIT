@@ -63,6 +63,24 @@
   .eventsOn {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+    font-weight: 300;
+
+    &.lg-heading {
+      font-size: 4rem;
+      width: 100%;
+      margin: auto;
+    }
+    &.sm-heading {
+      margin-bottom: 2rem;
+      padding: 0.2rem 1rem;
+      background: rgba(lighten($primary-color, 2), 0.5);
+    }
+  }
 }
 
 //Smartphones
@@ -72,5 +90,23 @@
   }
   .eventsOn {
     grid-template-columns: 1fr;
+  }
+
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+    font-weight: 200;
+
+    &.lg-heading {
+      font-size: 3rem;
+      width: 100%;
+      margin: auto;
+    }
+    &.sm-heading {
+      margin-bottom: 1rem;
+      padding: 0.2rem 1rem;
+      background: rgba(lighten($primary-color, 2), 0.5);
+    }
   }
 }
