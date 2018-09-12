@@ -209,7 +209,7 @@ main {
   grid-gap: 2rem; }
   .eventsOn img {
     width: 100%;
-    border: 1px #solid; }
+    border: 1px white solid; }
     .eventsOn img:hover {
       opacity: 0.5;
       border-color: #521aee;
